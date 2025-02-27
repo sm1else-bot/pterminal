@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="setup-form" class="setup-form">
+    <h2 class="text-center mb-4">Welcome to Pokémon Terminal</h2>
+    <form>
+        <div class="mb-3">
+            <label for="trainer-name" class="form-label">Enter your trainer name:</label>
+            <input type="text" class="form-control" id="trainer-name" required>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Choose your starter Pokémon:</label>
+            <div class="starter-selection">
+                <div class="starter-option">
+                    <input type="radio" name="starter" value="bulbasaur" id="bulbasaur" required>
+                    <label for="bulbasaur">
+                        <h5>Bulbasaur</h5>
+                        <p>Grass/Poison</p>
+                    </label>
+                </div>
+                <div class="starter-option">
+                    <input type="radio" name="starter" value="charmander" id="charmander">
+                    <label for="charmander">
+                        <h5>Charmander</h5>
+                        <p>Fire</p>
+                    </label>
+                </div>
+                <div class="starter-option">
+                    <input type="radio" name="starter" value="squirtle" id="squirtle">
+                    <label for="squirtle">
+                        <h5>Squirtle</h5>
+                        <p>Water</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-100">Start Adventure</button>
+    </form>
+</div>
+
+<div id="terminal" class="terminal-container">
+    <!-- Terminal content will be dynamically inserted here -->
+</div>
+{% endblock %}
